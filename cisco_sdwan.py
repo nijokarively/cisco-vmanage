@@ -134,6 +134,15 @@ class vmanage_session:
             print('Error: vmanage_attach_templates run into an exception')
             print(e)
 
+    def get_device_running_config(self, device_id):
+        mount_point = 'template/config/running/%s' % device_id
+        try:
+            response = json.loads(self.get_request(mount_point))
+            return response['config']
+        except Exception as e:
+            print('Error: get_device_running_config run into an exception')
+            print(e)
+            
     # Real Time Monitoring
     def get_control_connections(self, device_system_ip):
         mount_point = 'device/control/connections?deviceId=%s&&' % device_system_ip
