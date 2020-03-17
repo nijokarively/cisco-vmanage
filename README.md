@@ -1,4 +1,4 @@
-# cisco-vmanage
+# cisco-vmanage-rest-api
 Cisco vManage Rest API library
 
 Copyright (c) 2020 Nijo Karively
